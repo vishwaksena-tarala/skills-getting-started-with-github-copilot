@@ -20,55 +20,56 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
           "static")), name="static")
 
 # In-memory activity database
+# ...existing code...
 activities = {
     "Chess Club": {
         "description": "Learn strategies and compete in chess tournaments",
         "schedule": "Fridays, 3:30 PM - 5:00 PM",
         "location": "Room 204",
-            },
-            "Basketball": {
-                "description": "Team sport focusing on basketball skills and competitive play",
-                "schedule": "Mondays and Wednesdays, 4:00 PM - 5:30 PM",
-                "location": "Gymnasium",
-                "max_participants": 15,
-                "participants": ["james@mergington.edu"]
-            },
-            "Tennis Club": {
-                "description": "Learn tennis techniques and participate in matches",
-                "schedule": "Tuesdays and Thursdays, 4:00 PM - 5:30 PM",
-                "location": "Tennis Courts",
-                "max_participants": 10,
-                "participants": ["alex@mergington.edu"]
-            },
-            "Debate Club": {
-                "description": "Develop public speaking and critical thinking skills through debates",
-                "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
-                "location": "Room 105",
-                "max_participants": 25,
-                "participants": ["sarah@mergington.edu", "david@mergington.edu"]
-            },
-            "Science Olympiad": {
-                "description": "Compete in science competitions and experiments",
-                "schedule": "Saturdays, 10:00 AM - 12:00 PM",
-                "location": "Science Lab",
-                "max_participants": 20,
-                "participants": ["maya@mergington.edu"]
-            },
-            "Art Class": {
-                "description": "Explore various painting, drawing, and sculpture techniques",
-                "schedule": "Mondays and Thursdays, 3:30 PM - 5:00 PM",
-                "location": "Art Studio",
-                "max_participants": 18,
-                "participants": ["isabella@mergington.edu", "noah@mergington.edu"]
-            },
-            "Drama Club": {
-                "description": "Perform in theatrical productions and develop acting skills",
-                "schedule": "Tuesdays and Fridays, 4:00 PM - 5:30 PM",
-                "location": "Auditorium",
-                "max_participants": 22,
-                "participants": ["lucas@mergington.edu"]
         "max_participants": 12,
-        "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
+        "participants": []
+    },
+    "Basketball": {
+        "description": "Team sport focusing on basketball skills and competitive play",
+        "schedule": "Mondays and Wednesdays, 4:00 PM - 5:30 PM",
+        "location": "Gymnasium",
+        "max_participants": 15,
+        "participants": ["james@mergington.edu"]
+    },
+    "Tennis Club": {
+        "description": "Learn tennis techniques and participate in matches",
+        "schedule": "Tuesdays and Thursdays, 4:00 PM - 5:30 PM",
+        "location": "Tennis Courts",
+        "max_participants": 10,
+        "participants": ["alex@mergington.edu"]
+    },
+    "Debate Club": {
+        "description": "Develop public speaking and critical thinking skills through debates",
+        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+        "location": "Room 105",
+        "max_participants": 25,
+        "participants": ["sarah@mergington.edu", "david@mergington.edu"]
+    },
+    "Science Olympiad": {
+        "description": "Compete in science competitions and experiments",
+        "schedule": "Saturdays, 10:00 AM - 12:00 PM",
+        "location": "Science Lab",
+        "max_participants": 20,
+        "participants": ["maya@mergington.edu"]
+    },
+    "Art Class": {
+        "description": "Explore various painting, drawing, and sculpture techniques",
+        "schedule": "Mondays and Thursdays, 3:30 PM - 5:00 PM",
+        "location": "Art Studio",
+        "max_participants": 18,
+        "participants": ["isabella@mergington.edu", "noah@mergington.edu"]
+    },
+    "Drama Club": {
+        "description": "Perform in theatrical productions and develop acting skills",
+        "schedule": "Tuesdays and Fridays, 4:00 PM - 5:30 PM",
+        "location": "Auditorium",
+        "max_participants": 12,
+        "participants": ["michael@mergington.edu", "daniel@mergington.edu", "lucas@mergington.edu"]
     },
     "Programming Class": {
         "description": "Learn programming fundamentals and build software projects",
@@ -83,6 +84,7 @@ activities = {
         "participants": ["john@mergington.edu", "olivia@mergington.edu"]
     }
 }
+# ...existing code...
 
 
 @app.get("/")
